@@ -1,9 +1,8 @@
 import Header from '@/components/Header'
 
-export default function Home() {
-  return (
-    <div>
-      <Header />
-    </div>
-  )
+const Home = () => {
+  return <div></div>
 }
+
+Home.layout = 'default'
+export default Home

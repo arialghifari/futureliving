@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-import logo from '../../public/logo.svg'
-import hamburgerMenu from '../../public/hamburgerMenu.svg'
-import icGlobe from '../../public/icGlobe.svg'
+import logo from '../../../public/logo.svg'
+import hamburgerMenu from '../../../public/hamburgerMenu.svg'
+import icGlobe from '../../../public/icGlobe.svg'
 
-export default function Header() {
+export default function TransparentHeader() {
   const [showMenu, setShowMenu] = React.useState(false)
 
   function toggleMenu() {
@@ -12,8 +12,8 @@ export default function Header() {
   }
 
   return (
-    <div className="relative">
-      <div className="bg-blue-500 p-6 flex items-center justify-between bg-gradient-to-b from-[#0E1D70] to-[#2D4AAF]">
+    <div className="absolute w-full">
+      <div className="bg-transparent p-6 flex items-center justify-between border-b border-gray-300">
         <Image src={logo} alt="Logo" />
         <button onClick={toggleMenu}>
           <Image src={hamburgerMenu} alt="Hamburger menu" />
