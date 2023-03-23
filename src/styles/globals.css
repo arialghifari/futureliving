@@ -10,6 +10,6 @@
   }
 }
 
-.footer-caption{
-    @apply text-base md:text-sm lg:text-xl font-bold py-6 border-b-2 border-dotted;
-} 
+.footer-caption {
+  @apply text-base md:text-sm lg:text-xl font-bold py-6 border-b-2 border-dotted;
+}

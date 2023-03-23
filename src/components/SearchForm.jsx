@@ -10,7 +10,7 @@ export default function SearchForm() {
         <Input type="number" placeholder="Max. Harga" />
       </div>
       <select
-        className="rounded-lg border border-[#BFBFBF] py-2.5 px-4 text-sm w-full invalid:text-gray-400"
+        className="rounded-lg border border-[#BFBFBF] py-2.5 px-4 text-sm w-full invalid:text-gray-400 bg-white"
         required
         placeholder="Car Type"
       >
