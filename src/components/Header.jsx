@@ -5,7 +5,7 @@ import hamburgerMenu from '../../public/hamburgerMenu.svg'
 import icGlobe from '../../public/icGlobe.svg'
 
 export default function Header() {
-  const [showMenu, setShowMenu] = React.useState(true)
+  const [showMenu, setShowMenu] = React.useState(false)
 
   function toggleMenu() {
     setShowMenu((prev) => !prev)
