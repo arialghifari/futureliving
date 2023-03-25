@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         primary: '#0E1D70',
         secondary: '#ED9B2D',
+        text: '#333333',
       },
       height: {
         90: '20rem',

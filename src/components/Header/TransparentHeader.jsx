@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import logo from '../../../public/logo.svg'
 import hamburgerMenu from '../../../public/hamburgerMenu.svg'
-import icGlobe from '../../../public/icGlobe.svg'
+import icGlobe from '../../../public/icons/icGlobe.svg'
 
 export default function TransparentHeader() {
   const [showMenu, setShowMenu] = React.useState(false)
