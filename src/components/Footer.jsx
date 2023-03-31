@@ -11,17 +11,17 @@ export default function Footer() {
       <div className="bg-primary px-6 py-8 md:px-8 md:pt-10 md:pb-20 gap-1 md:gap-4 grid grid-cols-1 sm:pb-40 md:grid-cols-2 lg:grid-cols-4 text-white">
         <div>
           <Image src={logo} alt="futurelivin-logo" className="py-4" />
-          <div class="py-6">Miliki Rumah Impianmu Bersama Kami</div>
+          <div className="py-6">Miliki Rumah Impianmu Bersama Kami</div>
         </div>
         <div>
           <div className="footer-caption">LOKASI KAMI</div>
-          <div class="py-6">
+          <div className="py-6">
             Sepaku, Kabupaten Penajam Paser Utara, Provinsi Kalimantan Timur.
           </div>
         </div>
         <div>
           <div className="footer-caption">IKUTI KAMI DI SOSIAL MEDIA</div>
-          <div class="flex gap-2 py-6">
+          <div className="flex gap-2 py-6">
             <Image src={icFacebook} alt="icon-facebook" />
             <Image src={icTwitter} alt="icon-facebook" />
             <Image src={icInstagram} alt="icon-facebook" />

@@ -25,7 +25,7 @@ const Home = () => {
 
   return (
     <div>
-      {width > 1024 ? (
+      {width >= 1024 ? (
         <Image
           src={largeBanner}
           alt="Banner"
@@ -199,9 +199,9 @@ const Home = () => {
             width="600"
             height="450"
             className="w-full mt-6 lg:rounded-2xl"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
 
           <div className="text-center text-text mt-6 flex flex-col gap-6 lg:gap-11 px-6 w-full lg:shadow-lg lg:rounded-2xl lg:border lg:justify-center lg:text-left lg:p-9">
@@ -220,7 +220,7 @@ const Home = () => {
                 Key Location
               </p>
 
-              <div className="text-sm text-left flex flex-col items-center gap-3 lg:items-start lg:flex-row lg:flex-wrap lg:text-base w-full">
+              <div className="text-sm text-left flex flex-col items-center gap-3 lg:items-start lg:flex-row lg:flex-wrap lg:text-base w-full lg:max-w-[500px]">
                 <p className="w-44 flex items-center gap-2 flex-auto">
                   <span>
                     <Image src={icShoppingCart} alt="icon shopping cart" />
