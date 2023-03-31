@@ -1,4 +1,4 @@
-export default function LineTitle({ children, className }) {
+export default function LineTitle({ children }) {
   return (
     <div className="relative flex justify-center text-center">
       <div className="w-full absolute h-full flex items-center">

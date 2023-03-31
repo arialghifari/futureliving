@@ -1,7 +1,7 @@
 import ClusterCard from '@/components/Card/ClusterCard'
 import CardClusterTitle from '@/components/Title/CardClusterTitle'
 
-const Find = () => {
+const Buy = () => {
   return (
     <>
       {/* Search */}
@@ -14,19 +14,22 @@ const Find = () => {
             className="input rounded-xl md:text-xs"
             name="search"
             placeholder="Cari"
-          />{' '}
+          />
           <input
             className="input rounded-xl hidden md:block md:text-xs"
             name="search"
             placeholder="Harga Minimal"
-          />{' '}
+          />
           <input
             className="input rounded-xl hidden md:block md:text-xs"
             name="search"
             placeholder="Harga Maximal"
           />
-          <select class="select w-full rounded-xl hidden md:block md:text-xs">
-            <option disabled selected>
+          <select
+            className="select w-full rounded-xl hidden md:block md:text-xs"
+            defaultValue=""
+          >
+            <option value="" disabled>
               Jenis Cluster
             </option>
             <option>Han Solo</option>
@@ -88,6 +91,5 @@ const Find = () => {
   )
 }
 
-Find.layout = 'transparent_header'
-
-export default Find
+Buy.layout = 'default'
+export default Buy
