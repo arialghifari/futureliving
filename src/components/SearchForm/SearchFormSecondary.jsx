@@ -1,38 +1,40 @@
 import Button from '../Button'
 import Input from '../Input'
 
-export default function SearchFormSecondary() {
+export default function SearchFormSecondary({ className }) {
   return (
-    <form className="search px-6 py-8 flex flex-col gap-6 w-full lg:flex-row lg:gap-3 z-40 flex-grow lg:px-20 border-t border-t-[#546fd1] bg-gradient-to-b from-[#2D4AAF] to-[#4A74EA]">
-      <Input
-        type="text"
-        placeholder="Cari"
-        className="lg:text-base lg:w-full"
-      />
-      <div className="gap-3 hidden lg:flex">
+    <form
+      className={`search px-6 py-8 lg:py-20 lg:px-20 items-center justify-center ${className}`}
+    >
+      <div className="search grid grid-cols-1 lg:grid-cols-12 p-6 gap-3 w-full z-40 rounded-lg bg-white">
+        <Input
+          type="text"
+          placeholder="Cari"
+          className="lg:text-base lg:col-span-4"
+        />
         <Input
           type="number"
           placeholder="Min. Harga"
-          className="lg:w-56 lg:text-base"
+          className="lg:text-base hidden lg:inline lg:col-span-2"
         />
         <Input
           type="number"
           placeholder="Max. Harga"
-          className="lg:w-56 lg:text-base"
+          className="lg:text-base hidden lg:inline lg:col-span-2"
         />
+        <select
+          className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base hidden lg:inline lg:col-span-2"
+          required
+          defaultValue=""
+        >
+          <option value="" disabled>
+            Tipe Property
+          </option>
+          <option value="Classic">Classic</option>
+          <option value="Premium">Premium</option>
+        </select>
+        <Button className="lg:text-base lg:col-span-2">Cari</Button>
       </div>
-      <select
-        className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:w-56 lg:text-base hidden lg:inline"
-        required
-        defaultValue=""
-      >
-        <option value="" disabled>
-          Tipe Property
-        </option>
-        <option value="Classic">Classic</option>
-        <option value="Premium">Premium</option>
-      </select>
-      <Button className="lg:w-56 lg:text-base">Cari</Button>
     </form>
   )
 }

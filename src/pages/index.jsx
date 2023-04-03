@@ -18,21 +18,14 @@ import icBank from '../../public/icons/icBank.svg'
 import icBus from '../../public/icons/icBus.svg'
 import icBuilding from '../../public/icons/icBuilding.svg'
 import useWindowSize from '@/hooks/useWindowSize'
+import Carousel from '@/components/Carousel'
 
 const Home = () => {
   const { width } = useWindowSize()
 
   return (
     <div>
-      {width >= 1024 ? (
-        <Image
-          src={largeBanner}
-          alt="Banner"
-          className="w-full h-[600px] object-cover object-bottom"
-        />
-      ) : (
-        <Image src={banner} alt="Banner" className="w-full" />
-      )}
+      <Carousel />
       <SearchForm />
 
       {/* Section Tentang Kami */}

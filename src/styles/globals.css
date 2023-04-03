@@ -13,3 +13,27 @@
 .footer-caption {
   @apply text-base md:text-sm lg:text-xl font-bold py-6 border-b-2 border-dashed border-text/30;
 }
+
+.klusterSearch {
+  background: url('../../public/largeBanner.jpg');
+}
+
+.swiper-pagination-bullet {
+  background: #ffffff !important;
+  opacity: 0.8 !important;
+  margin-bottom: 3.5rem !important;
+  border: 1.2px solid white;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0e1d70 !important;
+  opacity: 1 !important;
+}
+
+@media only screen and (max-width: 1023px) {
+  .swiper-pagination-bullet {
+    margin-bottom: 0rem !important;
+  }
+}
