@@ -1,11 +1,15 @@
 import ClusterCard from '@/components/Card/ClusterCard'
 import SearchFormSecondary from '@/components/SearchForm/SearchFormSecondary'
 import CardClusterTitle from '@/components/Title/CardClusterTitle'
+import Image from 'next/image'
+import largeBanner from '../../public/largeBanner.jpg'
 
 const Buy = () => {
   return (
     <div>
-      <SearchFormSecondary />
+      <div className="klusterSearch relative h-auto">
+        <SearchFormSecondary className="h-full flex items-center shadow-lg" />
+      </div>
 
       {/* Body */}
       <div>
