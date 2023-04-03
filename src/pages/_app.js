@@ -29,7 +29,9 @@ export default function App({ Component, pageProps }) {
       <>
         <MetaHead />
         <Layout>
-          <main className={`${inter.className} text-zinc-800 min-h-screen bg-white`}>
+          <main
+            className={`${inter.className} text-text min-h-screen bg-white`}
+          >
             <Component {...pageProps} />
           </main>
         </Layout>
@@ -40,7 +42,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <MetaHead />
-      <main className={`${inter.className} text-zinc-800 min-h-screen bg-white`}>
+      <main className={`${inter.className} text-text min-h-screen bg-white`}>
         <Component {...pageProps} />
       </main>
     </>

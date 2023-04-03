@@ -3,7 +3,7 @@ export default function Input({ type, placeholder, className }) {
     <input
       type={type}
       placeholder={placeholder}
-      className={`rounded-lg border border-[#BFBFBF] py-2.5 px-4 text-sm w-full bg-white ${className}`}
+      className={`rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full bg-white ${className}`}
     />
   )
 }

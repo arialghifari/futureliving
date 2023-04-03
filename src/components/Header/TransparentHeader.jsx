@@ -22,12 +22,12 @@ export default function TransparentHeader() {
 
       {showMenu && (
         <div className="absolute top-[93px] left-0 py-3 px-6 bg-red-200 w-full flex flex-col gap-4 bg-gradient-to-b from-[#0E1D70] to-[#2D4AAF] text-white">
-          <button className="text-end hover:text-[#ED9B2D]">Home</button>
-          <button className="text-end hover:text-[#ED9B2D]">Buy</button>
-          <button className="text-end hover:text-[#ED9B2D]">About</button>
-          <button className="text-end hover:text-[#ED9B2D]">Contact</button>
-          <button className="text-end hover:text-[#ED9B2D]">Support</button>
-          <button className="text-end hover:text-[#ED9B2D] flex items-center gap-1 justify-end">
+          <button className="text-end hover:text-secondary">Home</button>
+          <button className="text-end hover:text-secondary">Buy</button>
+          <button className="text-end hover:text-secondary">About</button>
+          <button className="text-end hover:text-secondary">Contact</button>
+          <button className="text-end hover:text-secondary">Support</button>
+          <button className="text-end hover:text-secondary flex items-center gap-1 justify-end">
             <Image src={icGlobe} alt="Icon globe" />
             English
           </button>

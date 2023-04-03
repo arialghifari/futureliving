@@ -16,6 +16,10 @@ export default function Header() {
     setShowMenu((prev) => !prev)
   }
 
+  function handleLink() {
+    width < 1024 && setShowMenu(false)
+  }
+
   React.useEffect(() => {
     if (width >= 1024) {
       setShowMenu(true)
@@ -25,9 +29,11 @@ export default function Header() {
   }, [width])
 
   return (
-    <div className="relative lg:flex">
-      <div className="bg-blue-500 p-6 lg:px-20 flex items-center justify-between bg-gradient-to-b from-[#0E1D70] to-[#2D4AAF]">
-        <Image src={logo} alt="Logo" className="w-32 lg:w-auto" />
+    <div className="lg:flex sticky top-0 border-b-2 z-50">
+      <div className="px-6 lg:pl-20 lg:pr-0 flex items-center justify-between bg-white h-16">
+        <Link href="/">
+          <Image src={logo} alt="Logo" />
+        </Link>
         {width < 1024 && (
           <button onClick={toggleMenu}>
             <Image src={hamburgerMenu} alt="Hamburger menu" />
@@ -37,42 +43,58 @@ export default function Header() {
 
       {showMenu && (
         <div
-          className={`absolute lg:static top-[84px] left-0 px-6 lg:pr-20 py-4 bg-red-200 w-full flex flex-col gap-4 bg-gradient-to-b from-[#0E1D70] to-[#2D4AAF] text-white lg:flex-row lg:text-base`}
+          className={`absolute lg:static top-[64px] left-0 px-6 lg:pr-20 py-4 flex w-full lg:flex-1 flex-col gap-4 bg-white text-text lg:flex-row lg:text-base`}
         >
           <div className="flex flex-col lg:flex-row gap-4 lg:justify-center w-full lg:gap-6 lg:items-center">
             <Link
-              href={'/'}
-              className={`text-end hover:text-[#ED9B2D] ${
-                router?.pathname === '/' ? 'text-[#ED9B2D]' : ''
+              href="/"
+              className={`text-end hover:text-primary ${
+                router?.pathname === '/' ? 'text-primary font-semibold' : ''
               }`}
+              onClick={handleLink}
             >
-              Home
+              Beranda
             </Link>
             <Link
-              href={'/buy'}
-              className={`text-end hover:text-[#ED9B2D] ${
-                router?.pathname?.includes('/buy') ? 'text-[#ED9B2D]' : ''
+              href="/kluster"
+              className={`text-end hover:text-primary ${
+                router?.pathname?.includes('/kluster')
+                  ? 'text-primary font-semibold'
+                  : ''
               }`}
+              onClick={handleLink}
             >
-              Buy
+              Kluster
             </Link>
-            <Link href={'#'} className="text-end hover:text-[#ED9B2D]">
-              About
+            <Link
+              href="#"
+              className="text-end hover:text-primary"
+              onClick={handleLink}
+            >
+              Tentang
             </Link>
-            <Link href={'#'} className="text-end hover:text-[#ED9B2D]">
-              Contact
+            <Link
+              href="#"
+              className="text-end hover:text-primary"
+              onClick={handleLink}
+            >
+              Hubungi
             </Link>
-            <Link href={'#'} className="text-end hover:text-[#ED9B2D]">
-              Support
+            <Link
+              href="#"
+              className="text-end hover:text-primary"
+              onClick={handleLink}
+            >
+              Bantuan
             </Link>
           </div>
 
           <Link
-            href={'#'}
-            className="text-end hover:text-[#ED9B2D] flex items-center gap-1 justify-end"
+            href="#"
+            className="text-end flex items-center gap-1 justify-end hover:text-primary"
           >
             <Image src={icGlobe} alt="Icon globe" />
-            English
+            Indonesia
           </Link>
         </div>
       )}

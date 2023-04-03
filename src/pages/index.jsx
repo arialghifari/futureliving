@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import banner from '../../public/banner.jpg'
 import largeBanner from '../../public/largeBanner.jpg'
-import SearchForm from '@/components/SearchForm'
+import SearchForm from '@/components/SearchForm/SearchForm'
 import LineTitle from '@/components/Title/LineTitle'
 import houseImage from '../../public/houseImage.jpg'
 import virtualTour from '../../public/virtualTour.jpg'
@@ -102,12 +102,17 @@ const Home = () => {
           “Tidak Punya Waktu Untuk Melakukan Tour? Coba 3D Virtual Kami”
         </p>
 
-        <div className="flex flex-col items-center mt-6 lg:mt-10">
-          <Image
-            src={virtualTour}
-            alt="House virtual tour"
-            className="rounded-2xl w-full lg:w-2/3"
-          />
+        <div className="w-full flex justify-center items-center">
+          <iframe
+            src="https://www.klapty.com/tour/tunnel/hiL0VSDWXC"
+            frameborder="0"
+            allowfullscreen="true"
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+            allowvr="true"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; vr"
+            className="mt-6 lg:mt-10 rounded-2xl w-full lg:w-2/3 h-[450px]"
+          ></iframe>
         </div>
       </div>
 
