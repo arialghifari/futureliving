@@ -1,15 +1,15 @@
-import Button from './Button'
-import Input from './Input'
+import Button from '../Button'
+import Input from '../Input'
 
-export default function SearchForm() {
+export default function SearchFormSecondary() {
   return (
-    <form className="search p-6 flex flex-col gap-6 lg:mx-20 lg:bg-primary lg:flex-row rounded-lg lg:gap-3 lg:-translate-y-12 z-40 flex-grow">
+    <form className="search px-6 py-8 flex flex-col gap-6 w-full lg:flex-row lg:gap-3 z-40 flex-grow lg:px-20 border-t border-t-[#546fd1] bg-gradient-to-b from-[#2D4AAF] to-[#4A74EA]">
       <Input
         type="text"
         placeholder="Cari"
         className="lg:text-base lg:w-full"
       />
-      <div className="flex gap-2.5">
+      <div className="gap-3 hidden lg:flex">
         <Input
           type="number"
           placeholder="Min. Harga"
@@ -22,9 +22,8 @@ export default function SearchForm() {
         />
       </div>
       <select
-        className="rounded-lg border border-[#BFBFBF] py-2.5 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:w-56 lg:text-base"
+        className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:w-56 lg:text-base hidden lg:inline"
         required
-        placeholder="Car Type"
         defaultValue=""
       >
         <option value="" disabled>

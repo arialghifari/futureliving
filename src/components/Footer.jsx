@@ -4,13 +4,15 @@ import icFacebook from '../../public/icons/icFacebook.svg'
 import icTwitter from '../../public/icons/icTwitter.svg'
 import icInstagram from '../../public/icons/icInstagram.svg'
 import icLinkedin from '../../public/icons/icLinkedin.svg'
+import Button from './Button'
+import Input from './Input'
 
 export default function Footer() {
   return (
     <>
-      <div className="bg-primary px-6 py-8 md:px-8 md:pt-10 md:pb-20 gap-1 md:gap-4 grid grid-cols-1 sm:pb-40 md:grid-cols-2 lg:grid-cols-4 text-white">
+      <div className="bg-white px-6 py-8 md:px-8 md:pt-10 md:pb-20 gap-1 md:gap-4 grid grid-cols-1 sm:pb-40 md:grid-cols-2 lg:grid-cols-4 text-text">
         <div>
-          <Image src={logo} alt="futurelivin-logo" className="py-4" />
+          <Image src={logo} alt="futurelivin-logo" className="py-4 w-40" />
           <div className="py-6">Miliki Rumah Impianmu Bersama Kami</div>
         </div>
         <div>
@@ -35,15 +37,8 @@ export default function Footer() {
             Lainnya
           </div>
           <div className="flex gap-2">
-            <input
-              type="text"
-              name="email"
-              className="input w-3/4 bg-[#ffffff40] rounded-xl placeholder:text-sm md:placeholder:text-base"
-              placeholder="Masukan Email Anda"
-            />
-            <button className="btn bg-secondary rounded-xl placeholder:text-sm md:placeholder:text-base">
-              Kirim
-            </button>
+            <Input placeholder="Masukan Email Anda" />
+            <Button>Kirim</Button>
           </div>
         </div>
       </div>
