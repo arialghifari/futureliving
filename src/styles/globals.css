@@ -14,10 +14,6 @@
   @apply text-base md:text-sm lg:text-xl font-bold py-6 border-b-2 border-dashed border-text/30;
 }
 
-.klusterSearch {
-  background: url('../../public/largeBanner.jpg');
-}
-
 .swiper-pagination-bullet {
   background: #ffffff !important;
   opacity: 0.8 !important;

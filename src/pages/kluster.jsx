@@ -1,13 +1,16 @@
 import ClusterCard from '@/components/Card/ClusterCard'
 import SearchFormSecondary from '@/components/SearchForm/SearchFormSecondary'
 import CardClusterTitle from '@/components/Title/CardClusterTitle'
-import Image from 'next/image'
 import largeBanner from '../../public/largeBanner.jpg'
+import kluster from '@/data/kluster'
 
 const Buy = () => {
   return (
     <div>
-      <div className="klusterSearch relative h-auto">
+      <div
+        className="relative h-auto"
+        style={{ backgroundImage: `url(${largeBanner.src})` }}
+      >
         <SearchFormSecondary className="h-full flex items-center shadow-lg" />
       </div>
 
@@ -20,9 +23,13 @@ const Buy = () => {
             secondary
           />
           <div className="grid grid-cols-2 md:grid-cols-4 md:gap-2 gap-2 lg:gap-4 p-2 lg:p-6">
-            {[...Array(4)].map((x, i) => (
-              <div key={i}>
-                <ClusterCard />
+            {kluster.map((item, index) => (
+              <div key={index}>
+                <ClusterCard
+                  name={item.name}
+                  type={item.type}
+                  price={item.price}
+                />
               </div>
             ))}
           </div>
