@@ -10,7 +10,7 @@ import Input from './Input'
 export default function Footer() {
   return (
     <>
-      <div className="bg-white px-6 py-8 md:px-8 md:pt-10 md:pb-20 gap-1 md:gap-4 grid grid-cols-1 sm:pb-40 md:grid-cols-2 lg:grid-cols-4 text-text">
+      <div className="bg-[#FAFAFA] gap-1 md:gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-text py-12 px-6 lg:px-20 mt-20 lg:mt-32">
         <div>
           <Image src={logo} alt="futurelivin-logo" className="py-4 w-40" />
           <div className="py-6">Miliki Rumah Impianmu Bersama Kami</div>

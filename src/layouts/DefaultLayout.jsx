@@ -3,10 +3,10 @@ import Footer from '@/components/Footer'
 
 export default function DefaultLayout({ children }) {
   return (
-    <>
+    <div className="bg-white">
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }

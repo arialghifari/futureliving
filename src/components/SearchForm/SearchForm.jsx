@@ -28,6 +28,7 @@ export default function SearchForm() {
           Tipe Property
         </option>
         <option value="Classic">Classic</option>
+        <option value="Standard">Standard</option>
         <option value="Premium">Premium</option>
       </select>
       <Button className="lg:text-base col-span-full lg:col-span-2">Cari</Button>
