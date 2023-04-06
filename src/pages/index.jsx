@@ -92,8 +92,7 @@ const Home = () => {
         <div className="w-full flex justify-center items-center">
           <iframe
             src="https://www.klapty.com/tour/tunnel/hiL0VSDWXC"
-            frameborder="0"
-            allowfullscreen="true"
+            allowFullScreen={true}
             mozallowfullscreen="true"
             webkitallowfullscreen="true"
             allowvr="true"

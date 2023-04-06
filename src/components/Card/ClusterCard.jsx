@@ -1,10 +1,11 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const ClusterCard = ({ name, type, price, img }) => {
   return (
     <Link
       href="#"
-      className="border rounded-lg hover:border-zinc-400 flex flex-col"
+      className="border border-zinc-300 hover:border-zinc-500 rounded-lg flex flex-col"
     >
       <div>
         <div className="logo p-2 flex justify-center items-center">
@@ -15,12 +16,13 @@ const ClusterCard = ({ name, type, price, img }) => {
             }}
           ></div>
         </div>
-        <div
-          className="image h-32 lg:h-64"
-          style={{
-            background: `no-repeat center / cover url(${img.thumbnail}`,
-          }}
-        ></div>
+        <Image
+          src={img.thumbnail}
+          className="image h-32 lg:h-64 w-full object-cover"
+          alt={name}
+          width={300}
+          height={300}
+        />
       </div>
       <div className="p-3 lg:p-5 h-full flex flex-col justify-between">
         <div>
