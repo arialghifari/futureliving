@@ -1,23 +1,38 @@
-const ClusterCard = () => (
-  <>
-    <div className="border text-[0.6rem] md:text-xs lg:text-base rounded-xl">
-      <div className="logo p-2 flex justify-center items-center">
-        <div className="bg-gray-300 block w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14"></div>
+import Link from 'next/link'
+
+const ClusterCard = ({ name, type, price, img }) => {
+  return (
+    <Link
+      href="#"
+      className="border rounded-lg hover:border-zinc-400 flex flex-col"
+    >
+      <div>
+        <div className="logo p-2 flex justify-center items-center">
+          <div
+            className="w-8 lg:w-14 h-9 lg:h-16"
+            style={{
+              background: `no-repeat center / contain url(${img.logo}`,
+            }}
+          ></div>
+        </div>
+        <div
+          className="image h-32 lg:h-64"
+          style={{
+            background: `no-repeat center / cover url(${img.thumbnail}`,
+          }}
+        ></div>
       </div>
-      <div className="image h-32 md:h-36 lg:h-52 xl:h-72 bg-gray-300"></div>
-      <div className="content p-1 lg:p-4">
-        <div className="text-[0.9rem] md:text-[1.1rem] lg:text-2xl font-semibold py-1">
-          Havana
+      <div className="p-3 lg:p-5 h-full flex flex-col justify-between">
+        <div>
+          <p className="text-xl font-bold">{name}</p>
+          <p className="text-[#BFBFBF] mt-1">{type}</p>
         </div>
-        <div className="text-[0.7rem] md:text-[0.8rem] lg:text-lg py-1">
-          Sepaku
-        </div>
-        <div className="text-[0.5rem] lg:text-sm py-1">
-          Mulai dari <strong>Rp. 400.000.000,00</strong>
-        </div>
+        <p className="mt-6 lg:mt-8 text-base lg:text-xl">
+          Mulai <strong>Rp {Number(price).toLocaleString('ID')}</strong>
+        </p>
       </div>
-    </div>
-  </>
-)
+    </Link>
+  )
+}
 
 export default ClusterCard

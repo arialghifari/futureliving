@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import banner from '../../public/banner.jpg'
-import largeBanner from '../../public/largeBanner.jpg'
 import SearchForm from '@/components/SearchForm/SearchForm'
 import LineTitle from '@/components/Title/LineTitle'
 import houseImage from '../../public/houseImage.jpg'
@@ -17,12 +15,9 @@ import icTree from '../../public/icons/icTree.svg'
 import icBank from '../../public/icons/icBank.svg'
 import icBus from '../../public/icons/icBus.svg'
 import icBuilding from '../../public/icons/icBuilding.svg'
-import useWindowSize from '@/hooks/useWindowSize'
 import Carousel from '@/components/Carousel'
 
 const Home = () => {
-  const { width } = useWindowSize()
-
   return (
     <div>
       <Carousel />
@@ -185,7 +180,7 @@ const Home = () => {
       </div>
 
       {/* Section Lokasi */}
-      <div className="mt-16 pb-16 lg:pb-28">
+      <div className="mt-16">
         <div className="px-6 lg:px-20">
           <LineTitle>Lokasi</LineTitle>
         </div>

@@ -11,11 +11,7 @@
 }
 
 .footer-caption {
-  @apply text-base md:text-sm lg:text-xl font-bold py-6 border-b-2 border-dashed border-text/30;
-}
-
-.klusterSearch {
-  background: url('../../public/largeBanner.jpg');
+  @apply text-base lg:text-lg font-bold py-6 border-b-2 border-dashed border-text/30;
 }
 
 .swiper-pagination-bullet {
@@ -30,6 +26,14 @@
 .swiper-pagination-bullet-active {
   background: #0e1d70 !important;
   opacity: 1 !important;
+}
+
+.clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media only screen and (max-width: 1023px) {

@@ -4,7 +4,7 @@ import Input from '../Input'
 export default function SearchFormSecondary({ className }) {
   return (
     <form
-      className={`search px-6 py-8 lg:py-20 lg:px-20 items-center justify-center ${className}`}
+      className={`search px-6 py-8 lg:py-24 lg:px-20 items-center justify-center ${className}`}
     >
       <div className="search grid grid-cols-1 lg:grid-cols-12 p-6 gap-3 w-full z-40 rounded-lg bg-white">
         <Input
@@ -31,6 +31,7 @@ export default function SearchFormSecondary({ className }) {
             Tipe Property
           </option>
           <option value="Classic">Classic</option>
+          <option value="Standard">Standard</option>
           <option value="Premium">Premium</option>
         </select>
         <Button className="lg:text-base lg:col-span-2">Cari</Button>
