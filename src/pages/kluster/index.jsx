@@ -1,13 +1,13 @@
 import ClusterCard from '@/components/Card/ClusterCard'
 import SearchFormSecondary from '@/components/SearchForm/SearchFormSecondary'
 import CardClusterTitle from '@/components/Title/CardClusterTitle'
-import largeBanner from '../../public/largeBanner.jpg'
+import largeBanner from '../../../public/largeBanner.jpg'
 import kluster from '@/data/kluster'
 import React from 'react'
 import PropertyCard from '@/components/Card/PropertyCard'
 import { bestProperties, newProperties } from '@/data/property'
 
-const Buy = () => {
+const Kluster = () => {
   return (
     <div>
       <div
@@ -80,5 +80,5 @@ const Buy = () => {
   )
 }
 
-Buy.layout = 'default'
-export default Buy
+Kluster.layout = 'default'
+export default Kluster

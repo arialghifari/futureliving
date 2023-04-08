@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Button from '../Button'
 import Input from '../Input'
 
@@ -21,7 +22,6 @@ export default function SearchForm() {
       />
       <select
         className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base col-span-full lg:col-span-2"
-        required
         defaultValue=""
       >
         <option value="" disabled>
@@ -31,7 +31,12 @@ export default function SearchForm() {
         <option value="Standard">Standard</option>
         <option value="Premium">Premium</option>
       </select>
-      <Button className="lg:text-base col-span-full lg:col-span-2">Cari</Button>
+
+      <Link href="/search" className="lg:col-span-2">
+        <Button type="submit" className="lg:text-base lg:col-span-2 w-full h-full">
+          Cari
+        </Button>
+      </Link>
     </form>
   )
 }

@@ -4,6 +4,7 @@ import Input from '../Input'
 import Image from 'next/image'
 import icArrowShowSearch from '../../../public/icons/icArrowShowSearch.svg'
 import useWindowSize from '@/hooks/useWindowSize'
+import Link from 'next/link'
 
 export default function SearchFormSecondary({ className }) {
   const [isFullSearch, setIsFullSearch] = React.useState(false)
@@ -44,7 +45,6 @@ export default function SearchFormSecondary({ className }) {
 
         <select
           className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base lg:inline lg:col-span-2"
-          required
           defaultValue=""
         >
           <option value="" disabled>
@@ -68,9 +68,11 @@ export default function SearchFormSecondary({ className }) {
           Tampilkan Lebih {isFullSearch ? 'Sedikit' : 'Banyak'} Filter
         </button>
 
-        <Button type="submit" className="lg:text-base lg:col-span-2">
-          Cari
-        </Button>
+        <Link href="/search" className="lg:col-span-2">
+          <Button type="submit" className="lg:text-base lg:col-span-2 w-full h-full">
+            Cari
+          </Button>
+        </Link>
       </div>
     </form>
   )

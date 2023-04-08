@@ -17,7 +17,7 @@ const properties = [
     name: 'Arcadia Type Standard 1',
     kluster: 'arcadia',
     type: 'standard',
-    price: 50000000,
+    price: 500000000,
     specs: {
       bedroom: 2,
       bathroom: 3,
