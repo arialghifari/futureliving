@@ -1,6 +1,6 @@
 import React from 'react'
 import PropertyCard from '@/components/Card/PropertyCard'
-import { properties } from '@/data/property'
+import { properties } from '@/data/properties'
 import SearchFormSidebar from '@/components/SearchForm/SearchFormSidebar'
 import SearchBadge from '@/components/SearchBadge'
 

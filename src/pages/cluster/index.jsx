@@ -2,12 +2,12 @@ import ClusterCard from '@/components/Card/ClusterCard'
 import SearchFormSecondary from '@/components/SearchForm/SearchFormSecondary'
 import CardClusterTitle from '@/components/Title/CardClusterTitle'
 import largeBanner from '../../../public/largeBanner.jpg'
-import kluster from '@/data/kluster'
+import cluster from '@/data/cluster'
 import React from 'react'
 import PropertyCard from '@/components/Card/PropertyCard'
-import { bestProperties, newProperties } from '@/data/property'
+import { bestProperties, newProperties } from '@/data/properties'
 
-const Kluster = () => {
+const Cluster = () => {
   return (
     <div>
       <div
@@ -28,7 +28,7 @@ const Kluster = () => {
             secondary
           />
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-7">
-            {kluster.map((item) => (
+            {cluster.map((item) => (
               <ClusterCard
                 key={item.id}
                 name={item.name}
@@ -80,5 +80,5 @@ const Kluster = () => {
   )
 }
 
-Kluster.layout = 'default'
-export default Kluster
+Cluster.layout = 'default'
+export default Cluster

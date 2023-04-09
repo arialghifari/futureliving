@@ -4,7 +4,7 @@ import Link from 'next/link'
 const ClusterCard = ({ name, type, price, img }) => {
   return (
     <Link
-      href="#"
+      href="/cluster/detail"
       className="border border-zinc-300 hover:border-zinc-500 rounded-lg flex flex-col"
     >
       <div>

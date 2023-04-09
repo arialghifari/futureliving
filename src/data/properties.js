@@ -2,7 +2,7 @@ const properties = [
   {
     id: 1,
     name: 'Arcadia Type Classic 1',
-    kluster: 'arcadia',
+    cluster: 'arcadia',
     type: 'classic',
     price: 3500000000,
     specs: {
@@ -15,7 +15,7 @@ const properties = [
   {
     id: 2,
     name: 'Arcadia Type Standard 1',
-    kluster: 'arcadia',
+    cluster: 'arcadia',
     type: 'standard',
     price: 500000000,
     specs: {
@@ -28,7 +28,7 @@ const properties = [
   {
     id: 3,
     name: 'Havana Type Classic 1',
-    kluster: 'havana',
+    cluster: 'havana',
     type: 'classic',
     price: 400000000,
     specs: {
@@ -41,7 +41,7 @@ const properties = [
   {
     id: 4,
     name: 'Havana Type Classic 2',
-    kluster: 'havana',
+    cluster: 'havana',
     type: 'classic',
     price: 420000000,
     specs: {
@@ -54,7 +54,7 @@ const properties = [
   {
     id: 5,
     name: 'Havana Type Premium 1',
-    kluster: 'havana',
+    cluster: 'havana',
     type: 'premium',
     price: 500000000,
     specs: {
@@ -67,7 +67,7 @@ const properties = [
   {
     id: 6,
     name: 'Maharon Type Classic 2',
-    kluster: 'maharon',
+    cluster: 'maharon',
     type: 'classic',
     price: 520000000,
     specs: {
@@ -80,7 +80,7 @@ const properties = [
   {
     id: 7,
     name: 'Maharon Type Standard 1',
-    kluster: 'maharon',
+    cluster: 'maharon',
     type: 'standard',
     price: 470000000,
     specs: {
@@ -93,8 +93,8 @@ const properties = [
   {
     id: 8,
     name: 'Noxa Type Classic 1',
-    kluster: 'noxa',
-    type: 'standard',
+    cluster: 'noxa',
+    type: 'classic',
     price: 390000000,
     specs: {
       bedroom: 2,
@@ -106,7 +106,7 @@ const properties = [
   {
     id: 9,
     name: 'Noxa Type Premium 1',
-    kluster: 'noxa',
+    cluster: 'noxa',
     type: 'premium',
     price: 600000000,
     specs: {
@@ -119,7 +119,7 @@ const properties = [
   {
     id: 10,
     name: 'Noxa Type Premium 2',
-    kluster: 'noxa',
+    cluster: 'noxa',
     type: 'premium',
     price: 800000000,
     specs: {
