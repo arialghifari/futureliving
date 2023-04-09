@@ -7,7 +7,7 @@ import icSquare from '../../../public/icons/icSquare.svg'
 export default function PropertyCard({ name, price, img, specs }) {
   return (
     <Link
-      href="#"
+      href="/properti/detail"
       className="border border-zinc-300 hover:border-zinc-500 rounded-lg"
       title={name}
     >

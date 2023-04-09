@@ -56,9 +56,9 @@ export default function Header() {
               Beranda
             </Link>
             <Link
-              href="/kluster"
+              href="/cluster"
               className={`text-end hover:text-primary ${
-                router?.pathname?.includes('/kluster')
+                router?.pathname?.includes('/cluster')
                   ? 'text-primary font-semibold'
                   : ''
               }`}

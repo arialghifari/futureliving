@@ -1,10 +1,10 @@
-const kluster = [
+const cluster = [
   {
     id: 1,
     name: 'Havana',
     type: 'Modern',
     price: 400000000,
-    img: { logo: '/kluster/havanaLogo.svg', thumbnail: '/kluster/havana.jpg' },
+    img: { logo: '/cluster/havanaLogo.svg', thumbnail: '/cluster/havana.jpg' },
   },
   {
     id: 2,
@@ -12,8 +12,8 @@ const kluster = [
     type: 'Modern',
     price: 650000000,
     img: {
-      logo: '/kluster/maharonLogo.svg',
-      thumbnail: '/kluster/maharon.jpg',
+      logo: '/cluster/maharonLogo.svg',
+      thumbnail: '/cluster/maharon.jpg',
     },
   },
   {
@@ -22,8 +22,8 @@ const kluster = [
     type: 'Modern',
     price: 800000000,
     img: {
-      logo: '/kluster/arcadiaLogo.svg',
-      thumbnail: '/kluster/arcadia.jpg',
+      logo: '/cluster/arcadiaLogo.svg',
+      thumbnail: '/cluster/arcadia.jpg',
     },
   },
   {
@@ -31,8 +31,8 @@ const kluster = [
     name: 'Noxa',
     type: 'Modern',
     price: 1000000000,
-    img: { logo: '/kluster/noxaLogo.svg', thumbnail: '/kluster/noxa.jpg' },
+    img: { logo: '/cluster/noxaLogo.svg', thumbnail: '/cluster/noxa.jpg' },
   },
 ]
 
-export default kluster
+export default cluster
