@@ -11,39 +11,39 @@ export default function SearchFormSidebar({ className }) {
   return (
     <form className={`search items-center justify-center ${className}`}>
       <p className="text-xl font-bold mb-3 hidden lg:block">Pencarian</p>
-      <div className="search gap-3 w-full z-40 rounded-lg bg-white flex flex-col p-6 lg:p-0">
+      <div className="search gap-3 w-full z-40 rounded-lg bg-white grid grid-cols-2 p-6 lg:p-0">
         <Input
           type="text"
           placeholder="Cari"
-          className="lg:text-base lg:col-span-4"
+          className="lg:text-base col-span-full"
         />
         <Input
           type="number"
           placeholder="Min. Harga"
-          className="lg:text-base lg:inline lg:col-span-2"
+          className="lg:text-base lg:inline col-span-1 lg:col-span-full"
         />
         <Input
           type="number"
           placeholder="Max. Harga"
-          className="lg:text-base lg:inline lg:col-span-2"
+          className="lg:text-base lg:inline col-span-1 lg:col-span-full"
         />
-
-        <select
-          className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base lg:inline lg:col-span-2"
-          defaultValue=""
-        >
-          <option value="" disabled>
-            Tipe Property
-          </option>
-          <option value="Classic">Classic</option>
-          <option value="Standard">Standard</option>
-          <option value="Premium">Premium</option>
-        </select>
 
         {isFullSearch && (
           <>
             <select
-              className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base lg:inline lg:col-span-2"
+              className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base lg:inline col-span-1 lg:col-span-full"
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Tipe Property
+              </option>
+              <option value="Classic">Classic</option>
+              <option value="Standard">Standard</option>
+              <option value="Premium">Premium</option>
+            </select>
+
+            <select
+              className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base lg:inline col-span-1 lg:col-span-full"
               defaultValue=""
             >
               <option value="" disabled>
@@ -56,7 +56,7 @@ export default function SearchFormSidebar({ className }) {
             </select>
 
             <select
-              className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base lg:inline lg:col-span-2"
+              className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base lg:inline col-span-1 lg:col-span-full"
               defaultValue=""
             >
               <option value="" disabled>
@@ -69,7 +69,7 @@ export default function SearchFormSidebar({ className }) {
             </select>
 
             <select
-              className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base lg:inline lg:col-span-2"
+              className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base lg:inline col-span-1 lg:col-span-full"
               defaultValue=""
             >
               <option value="" disabled>
@@ -83,7 +83,7 @@ export default function SearchFormSidebar({ className }) {
         )}
 
         <button
-          className="flex items-center gap-2 justify-center p-2 w-full"
+          className="flex items-center gap-2 justify-center p-2 w-full col-span-full"
           onClick={() => setIsFullSearch((prev) => !prev)}
           type="button"
         >
@@ -95,11 +95,8 @@ export default function SearchFormSidebar({ className }) {
           Tampilkan Lebih {isFullSearch ? 'Sedikit' : 'Banyak'} Filter
         </button>
 
-        <Link href="/search" className="lg:col-span-2">
-          <Button
-            type="submit"
-            className="lg:text-base lg:col-span-2 w-full h-full"
-          >
+        <Link href="/search" className="col-span-full">
+          <Button type="submit" className="lg:text-base w-full h-full">
             Cari
           </Button>
         </Link>

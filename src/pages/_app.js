@@ -4,6 +4,7 @@ import Head from 'next/head'
 import DefaultLayout from '@/layouts/DefaultLayout'
 import WithoutHeader from '@/layouts/WithoutHeader'
 import WithTransparentHeader from '@/layouts/WithTransparentHeader'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,6 +33,19 @@ export default function App({ Component, pageProps }) {
           <main
             className={`${inter.className} text-text min-h-screen bg-white`}
           >
+            <Script type="text/javascript" id="tawk" strategy="lazyOnload">
+              {`
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/64343f9b4247f20fefead770/1gtm1gu3t';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();  
+        `}
+            </Script>
             <Component {...pageProps} />
           </main>
         </Layout>
