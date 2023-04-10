@@ -22,10 +22,10 @@ import { FreeMode } from 'swiper'
 
 const ClusterDetail = () => {
   const [propertyList, setPropertyList] = React.useState('')
-  const [type, setType] = React.useState('premium')
-  console.log(propertyList)
-  const activeClass =
-    'bg-white text-[#0E1D70] hover:bg-white hover:border-primary/80 hover:text-primary/80'
+  const [type, setType] = React.useState('classic')
+
+  const inactiveClass =
+    'bg-white hover:bg-white hover:border-primary/80 hover:text-primary/80'
 
   React.useMemo(() => {
     const filteredProperties = properties.filter(
@@ -82,16 +82,18 @@ const ClusterDetail = () => {
           <div className="flex justify-center gap-4 lg:gap-8 mb-10">
             <Button
               className={`w-40 border-2 border-primary ${
-                type === 'classic' ? '' : activeClass
+                type === 'classic' ? '' : inactiveClass
               }`}
+              style={{ color: type === 'classic' ? '' : '#0E1D70' }}
               onClick={() => setType('classic')}
             >
               Classic
             </Button>
             <Button
               className={`w-40 border-2 border-primary ${
-                type === 'premium' ? '' : activeClass
+                type === 'premium' ? '' : inactiveClass
               }`}
+              style={{ color: type === 'premium' ? '' : '#0E1D70' }}
               onClick={() => setType('premium')}
             >
               Premium
@@ -185,7 +187,7 @@ const ClusterDetail = () => {
           <Image
             src={documentationImg}
             alt="Dokumentasi properti"
-            className="min-h-[250px] object-cover w-full rounded-lg"
+            className="object-contain w-full rounded-lg"
           />
         </div>
 
