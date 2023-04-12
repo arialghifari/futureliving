@@ -28,12 +28,14 @@ export default function SearchForm() {
           Tipe Property
         </option>
         <option value="Classic">Classic</option>
-        <option value="Standard">Standard</option>
         <option value="Premium">Premium</option>
       </select>
 
       <Link href="/search" className="col-span-full lg:col-span-2">
-        <Button type="submit" className="lg:text-base lg:col-span-2 w-full h-full">
+        <Button
+          type="submit"
+          className="lg:text-base lg:col-span-2 w-full h-full"
+        >
           Cari
         </Button>
       </Link>

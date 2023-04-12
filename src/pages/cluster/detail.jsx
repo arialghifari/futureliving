@@ -37,7 +37,7 @@ const ClusterDetail = () => {
 
   return (
     <div>
-      <Breadcrumbs />
+      <Breadcrumbs>Kluster / Noxa</Breadcrumbs>
 
       <div>
         <Image

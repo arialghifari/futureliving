@@ -38,7 +38,6 @@ export default function SearchFormSidebar({ className }) {
                 Tipe Property
               </option>
               <option value="Classic">Classic</option>
-              <option value="Standard">Standard</option>
               <option value="Premium">Premium</option>
             </select>
 
