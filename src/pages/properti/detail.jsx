@@ -23,7 +23,7 @@ const PropertyDetail = () => {
     <div>
       <Breadcrumbs>Kluster / Noxa / Noxa Premium 1</Breadcrumbs>
 
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col gap-16 lg:gap-20">
         {/* Main Description */}
         <div className="grid grid-cols-2">
           <div className="relative col-span-full lg:col-span-1 h-[300px] lg:h-auto">
@@ -85,10 +85,10 @@ const PropertyDetail = () => {
 
         {/* Fasilitas */}
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 px-6 lg:px-20">
-          <div className="order-last lg:order-1">
+          <div className="order-last lg:order-1 mt-10 lg:mt-0">
             <p className="font-bold text-3xl">Fasilitas</p>
 
-            <p className="mt-8 mb-1">
+            <p className="mt-4 lg:mt-8 mb-1">
               Beberapa fasilitas yang didapatkan di Unit Noxa premium 1
             </p>
             <ul>
@@ -99,7 +99,7 @@ const PropertyDetail = () => {
             </ul>
           </div>
 
-          <div className="flex gap-5 lg:order-last justify-between">
+          <div className="flex gap-5 lg:order-last justify-center flex-wrap">
             <Image src={fasilitas1} alt="fasilitas" />
             <Image src={fasilitas2} alt="fasilitas" />
             <Image src={fasilitas3} alt="fasilitas" />
@@ -108,8 +108,8 @@ const PropertyDetail = () => {
         </div>
 
         {/* 360 and Video */}
-        <div className="grid grid-cols-2 gap-5 lg:px-20 text-center">
-          <div>
+        <div className="grid grid-cols-2 gap-10 lg:gap-5 px-6 lg:px-20 text-center">
+          <div className="col-span-full lg:col-span-1">
             <p className="font-bold text-3xl">Tur 360</p>
             <iframe
               src="https://www.klapty.com/tour/tunnel/z7V0v9USAH"
@@ -118,11 +118,11 @@ const PropertyDetail = () => {
               webkitallowfullscreen="true"
               allowvr="true"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; vr"
-              className="w-full h-[500px] rounded-lg mt-5"
+              className="w-full h-[650px] lg:h-[500px] rounded-lg mt-5"
             ></iframe>
           </div>
 
-          <div>
+          <div className="col-span-full lg:col-span-1">
             <p className="font-bold text-3xl">Video Show Unit</p>
             <iframe
               allowFullScreen={true}
@@ -131,33 +131,55 @@ const PropertyDetail = () => {
               src="https://www.youtube.com/embed/mgulkcaPMCY"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              className="h-[500px] mt-5 rounded-lg w-full"
+              className="h-[650px] lg:h-[500px] mt-5 rounded-lg w-full"
             ></iframe>
           </div>
         </div>
 
         {/* Button */}
-        <div className="text-center px-6">
-          <Button className="max-w-80 px-10">Cek Spesifikasi Bangunan</Button>
+        <div className="text-center px-6 lg:px-20">
+          <Button className="w-full lg:max-w-80 px-10">
+            Cek Spesifikasi Bangunan
+          </Button>
         </div>
 
         {/* Gellery */}
-        <div className="lg:px-20">
+        <div className="px-6 lg:px-20 w-full">
           <p className="font-bold text-3xl text-center mb-5">Galeri</p>
 
-          <div className="grid grid-cols-5 gap-5">
-            <Image src={gallery1} alt="Gallery" className="rounded-lg" />
-            <Image src={gallery2} alt="Gallery" className="rounded-lg" />
-            <Image src={gallery3} alt="Gallery" className="rounded-lg" />
-            <Image src={gallery4} alt="Gallery" className="rounded-lg" />
-            <Image src={gallery5} alt="Gallery" className="rounded-lg" />
+          <div className="flex w-full gap-5 flex-wrap justify-center">
+            <Image
+              src={gallery1}
+              alt="Gallery"
+              className="rounded-lg h-[140px] w-[140px] object-cover"
+            />
+            <Image
+              src={gallery2}
+              alt="Gallery"
+              className="rounded-lg h-[140px] w-[140px] object-cover"
+            />
+            <Image
+              src={gallery3}
+              alt="Gallery"
+              className="rounded-lg h-[140px] w-[140px] object-cover"
+            />
+            <Image
+              src={gallery4}
+              alt="Gallery"
+              className="rounded-lg h-[140px] w-[140px] object-cover"
+            />
+            <Image
+              src={gallery5}
+              alt="Gallery"
+              className="rounded-lg h-[140px] w-[140px] object-cover"
+            />
           </div>
         </div>
 
         {/* Estimasi Nilai Pasar */}
-        <div className="lg:px-20">
+        <div className="lg:px-20 px-6">
           <p className="text-3xl font-bold">Estimasi Nilai Pasar</p>
-          <p className="text-secondary text-xl mt-1">
+          <p className="text-secondary text-lg mt-1">
             Beli sekarang dan Anda bisa mendapatkan hasil investasi Anda nanti
           </p>
           <p className="mt-4">Rumah Ini - Rp. 600.000.000</p>
@@ -165,11 +187,11 @@ const PropertyDetail = () => {
         </div>
 
         {/* Perhitungan KPR */}
-        <div className="lg:px-20">
+        <div className="lg:px-20 px-6">
           <p className="text-3xl font-bold text-center">Perhitungan KPR</p>
 
           <div className="grid grid-cols-5 gap-8 mt-8">
-            <div className="grid grid-cols-2 border shadow-sm col-span-2 h-fit p-5 rounded-lg gap-6">
+            <div className="grid grid-cols-2 border shadow-sm col-span-full lg:col-span-2 h-fit p-5 rounded-lg gap-y-6 text-sm lg:text-base">
               <p className="col-span-2 font-bold text-2xl">Simulasi KPR</p>
 
               <p>Harga Properti</p>
@@ -228,19 +250,21 @@ const PropertyDetail = () => {
               <Button className="col-span-full">Simulasikan KPR</Button>
             </div>
 
-            <div className="flex flex-col gap-8 col-span-3">
+            <div className="flex flex-col gap-8 col-span-full lg:col-span-3">
               <div className="border shadow-sm p-5 rounded-lg">
                 <p className="font-bold text-2xl">Angsuran Bulanan</p>
 
-                <div className="flex gap-10 mt-2">
-                  <p className="text-xl font-bold">Bunga 2.75%</p>
-                  <p className="text-xl font-bold">Rp 1.122.284</p>
+                <div className="flex gap-5 lg:gap-10 mt-5 flex-wrap">
+                  <p className="text-lg lg:text-xl font-bold">Bunga 2.75%</p>
+                  <p className="text-lg lg:text-xl font-bold">Rp 1.122.284</p>
                 </div>
               </div>
 
               <div className="border shadow-sm p-5 rounded-lg flex flex-col gap-2">
                 <p className="font-bold text-2xl">Angsuran Bulanan Hanya</p>
-                <p className="text-secondary font-bold text-xl">Rp. 705.618</p>
+                <p className="text-secondary font-bold text-xl my-5">
+                  Rp. 705.618
+                </p>
                 <Button className="bg-secondary w-full text-zinc-900 hover:bg-secondary/90">
                   Ajukan KPR
                 </Button>
