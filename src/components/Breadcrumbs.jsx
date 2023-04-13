@@ -1,14 +1,23 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function Breadcrumbs() {
+export default function Breadcrumbs({ children }) {
+  const split = children?.split(' / ')
+
   return (
     <div className="px-6 lg:px-20 bg-[#FAFAFA] py-5 flex gap-4">
-      <Link href="/cluster">Kluster</Link>
-      <p>/</p>
-      <Link href="/cluster/detail" className="text-secondary">
-        Noxa
-      </Link>
+      {split.map((item, index) =>
+        split.length - 1 === index ? (
+          <p className="text-secondary" key={index}>
+            {item}
+          </p>
+        ) : (
+          <div className="flex gap-4" key={index}>
+            <p>{item}</p>
+            <p>/</p>
+          </div>
+        )
+      )}
     </div>
   )
 }
