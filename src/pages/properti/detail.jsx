@@ -16,14 +16,16 @@ import gallery3 from '../../../public/gallery3.jpg'
 import gallery4 from '../../../public/gallery4.jpg'
 import gallery5 from '../../../public/gallery5.jpg'
 import chart from '../../../public/chart.svg'
+import aturJadwal from '../../../public/aturJadwal.svg'
 import Button from '@/components/Button'
 import ScheduleModal from '@/components/Modal/ScheduleModal'
 import SpecsModal from '@/components/Modal/SpecsModal'
+import GalleryModal from '@/components/Modal/GalleryModal'
 
 const PropertyDetail = () => {
   const [isShowSchedule, setIsShowSchedule] = React.useState(false)
   const [isShowSpecs, setIsShowSpecs] = React.useState(false)
-  const date = new Date()
+  const [isShowGallery, setIsShowGallery] = React.useState(false)
 
   return (
     <div>
@@ -160,7 +162,10 @@ const PropertyDetail = () => {
 
         {/* Button */}
         <div className="text-center px-6 lg:px-20">
-          <Button className="px-10 w-full lg:w-fit" onClick={() => setIsShowSpecs(true)}>
+          <Button
+            className="px-10 w-full lg:w-fit"
+            onClick={() => setIsShowSpecs(true)}
+          >
             Cek Spesifikasi Bangunan
           </Button>
         </div>
@@ -172,33 +177,45 @@ const PropertyDetail = () => {
           <p className="font-bold text-3xl text-center mb-5">Galeri</p>
 
           <div className="flex w-full gap-5 flex-wrap justify-center">
-            <Image
-              src={gallery1}
-              alt="Gallery"
-              className="rounded-lg h-[140px] w-[140px] object-cover"
-            />
-            <Image
-              src={gallery2}
-              alt="Gallery"
-              className="rounded-lg h-[140px] w-[140px] object-cover"
-            />
-            <Image
-              src={gallery3}
-              alt="Gallery"
-              className="rounded-lg h-[140px] w-[140px] object-cover"
-            />
-            <Image
-              src={gallery4}
-              alt="Gallery"
-              className="rounded-lg h-[140px] w-[140px] object-cover"
-            />
-            <Image
-              src={gallery5}
-              alt="Gallery"
-              className="rounded-lg h-[140px] w-[140px] object-cover"
-            />
+            <button onClick={() => setIsShowGallery(true)}>
+              <Image
+                src={gallery1}
+                alt="Gallery"
+                className="rounded-lg h-[140px] w-[140px] object-cover"
+              />
+            </button>
+            <button onClick={() => setIsShowGallery(true)}>
+              <Image
+                src={gallery2}
+                alt="Gallery"
+                className="rounded-lg h-[140px] w-[140px] object-cover"
+              />
+            </button>
+            <button onClick={() => setIsShowGallery(true)}>
+              <Image
+                src={gallery3}
+                alt="Gallery"
+                className="rounded-lg h-[140px] w-[140px] object-cover"
+              />
+            </button>
+            <button onClick={() => setIsShowGallery(true)}>
+              <Image
+                src={gallery4}
+                alt="Gallery"
+                className="rounded-lg h-[140px] w-[140px] object-cover"
+              />
+            </button>
+            <button onClick={() => setIsShowGallery(true)}>
+              <Image
+                src={gallery5}
+                alt="Gallery"
+                className="rounded-lg h-[140px] w-[140px] object-cover"
+              />
+            </button>
           </div>
         </div>
+
+        {isShowGallery && <GalleryModal setIsOpen={setIsShowGallery} />}
 
         {/* Estimasi Nilai Pasar */}
         <div className="lg:px-20 px-6">
@@ -304,11 +321,21 @@ const PropertyDetail = () => {
           </p>
 
           <div className="flex justify-center items-center mt-8">
-            <Button className="px-10 w-full lg:w-fit" onClick={() => setIsShowSchedule(true)}>
+            <Button
+              className="px-10 w-full lg:w-fit"
+              onClick={() => setIsShowSchedule(true)}
+            >
               Pilih waktu yang anda inginkan
             </Button>
           </div>
         </div>
+
+        <button
+          className="fixed bottom-5 right-[90px]"
+          onClick={() => setIsShowSchedule(true)}
+        >
+          <Image src={aturJadwal} alt="Atur jadwal" />
+        </button>
 
         {isShowSchedule && <ScheduleModal setIsOpen={setIsShowSchedule} />}
       </div>
