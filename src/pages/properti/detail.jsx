@@ -17,8 +17,14 @@ import gallery4 from '../../../public/gallery4.jpg'
 import gallery5 from '../../../public/gallery5.jpg'
 import chart from '../../../public/chart.svg'
 import Button from '@/components/Button'
+import ScheduleModal from '@/components/Modal/ScheduleModal'
+import SpecsModal from '@/components/Modal/SpecsModal'
 
 const PropertyDetail = () => {
+  const [isShowSchedule, setIsShowSchedule] = React.useState(false)
+  const [isShowSpecs, setIsShowSpecs] = React.useState(false)
+  const date = new Date()
+
   return (
     <div>
       <Breadcrumbs>Kluster / Noxa / Noxa Premium 1</Breadcrumbs>
@@ -100,10 +106,26 @@ const PropertyDetail = () => {
           </div>
 
           <div className="flex gap-5 lg:order-last justify-center flex-wrap">
-            <Image src={fasilitas1} alt="fasilitas" />
-            <Image src={fasilitas2} alt="fasilitas" />
-            <Image src={fasilitas3} alt="fasilitas" />
-            <Image src={fasilitas4} alt="fasilitas" />
+            <Image
+              src={fasilitas1}
+              alt="fasilitas"
+              className="object-cover rounded-lg"
+            />
+            <Image
+              src={fasilitas2}
+              alt="fasilitas"
+              className="object-cover rounded-lg"
+            />
+            <Image
+              src={fasilitas3}
+              alt="fasilitas"
+              className="object-cover rounded-lg"
+            />
+            <Image
+              src={fasilitas4}
+              alt="fasilitas"
+              className="object-cover rounded-lg"
+            />
           </div>
         </div>
 
@@ -138,10 +160,12 @@ const PropertyDetail = () => {
 
         {/* Button */}
         <div className="text-center px-6 lg:px-20">
-          <Button className="w-full lg:max-w-80 px-10">
+          <Button className="px-10 w-full lg:w-fit" onClick={() => setIsShowSpecs(true)}>
             Cek Spesifikasi Bangunan
           </Button>
         </div>
+
+        {isShowSpecs && <SpecsModal setIsOpen={setIsShowSpecs} />}
 
         {/* Gellery */}
         <div className="px-6 lg:px-20 w-full">
@@ -273,16 +297,20 @@ const PropertyDetail = () => {
           </div>
         </div>
 
-        {/* Perhitungan KPR */}
-        <div className="lg:px-20">
+        {/* Atur Jadwal Anda Sekarang */}
+        <div className="lg:px-20 px-6">
           <p className="text-3xl font-bold text-center">
             Atur Jadwal Anda Sekarang
           </p>
 
           <div className="flex justify-center items-center mt-8">
-            <Button className="px-10">Pilih waktu yang anda inginkan</Button>
+            <Button className="px-10 w-full lg:w-fit" onClick={() => setIsShowSchedule(true)}>
+              Pilih waktu yang anda inginkan
+            </Button>
           </div>
         </div>
+
+        {isShowSchedule && <ScheduleModal setIsOpen={setIsShowSchedule} />}
       </div>
     </div>
   )
