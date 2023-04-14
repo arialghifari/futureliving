@@ -10,6 +10,18 @@
   }
 }
 
+select {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M5 7.5L0.669872 0L9.33013 0L5 7.5Z" fill="black"/></svg>')
+    no-repeat 95% 50%;
+  /* no-repeat 95% 50% */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  padding: 5px;
+  min-height: 45px;
+}
+
 .footer-caption {
   @apply text-base lg:text-lg font-bold py-6 border-b-2 border-dashed border-text/30;
 }
