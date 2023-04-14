@@ -10,7 +10,7 @@ export default function Modal({ children, setIsOpen }) {
       onClick={() => setIsOpen(false)}
     >
       <div
-        className="bg-white p-5 rounded-lg m-6 lg:m-20 overflow-auto max-h-[90vh] h-fit"
+        className="bg-white p-5 rounded-lg m-6 lg:m-20 overflow-auto max-h-[90vh] h-fit lg:min-w-[550px]"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mb-5 w-full">
