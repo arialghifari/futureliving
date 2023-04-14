@@ -88,7 +88,7 @@ const properties = [
       bathroom: 3,
       landArea: 450,
     },
-    img: '/property/maharonstandard1.jpg',
+    img: '/property/maharonstandard11.jpg',
   },
   {
     id: 8,
