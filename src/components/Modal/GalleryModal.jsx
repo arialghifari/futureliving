@@ -1,8 +1,8 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
 import { EffectCoverflow, Pagination } from 'swiper'
 
 import Modal from '../Modal'
@@ -38,7 +38,7 @@ export default function GalleryModal({ setIsOpen }) {
             alt="gallery image"
             width={500}
             height={500}
-            className="object-cover w-full h-[400px]"
+            className="object-cover w-full h-[400px] lg:h-[600px]"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -47,7 +47,7 @@ export default function GalleryModal({ setIsOpen }) {
             alt="gallery image"
             width={500}
             height={500}
-            className="object-cover w-full h-[400px]"
+            className="object-cover w-full h-[400px] md:h-[520px] lg:h-[600px]"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -56,7 +56,7 @@ export default function GalleryModal({ setIsOpen }) {
             alt="gallery image"
             width={500}
             height={500}
-            className="object-cover w-full h-[400px]"
+            className="object-cover w-full h-[400px] lg:h-[600px]"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -65,7 +65,7 @@ export default function GalleryModal({ setIsOpen }) {
             alt="gallery image"
             width={500}
             height={500}
-            className="object-cover w-full h-[400px]"
+            className="object-cover w-full h-[400px] lg:h-[600px]"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -74,7 +74,7 @@ export default function GalleryModal({ setIsOpen }) {
             alt="gallery image"
             width={500}
             height={500}
-            className="object-cover w-full h-[400px]"
+            className="object-cover w-full h-[400px] lg:h-[600px]"
           />
         </SwiperSlide>
       </Swiper>
