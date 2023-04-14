@@ -47,16 +47,6 @@ export default function ScheduleModal({ setIsOpen }) {
                 Tanggal Terpilih
               </p>
             </div>
-            <p>
-              Jadwal anda {''}
-              {date.toLocaleDateString('id', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-              {''} jam {time || '--'}.
-            </p>
           </div>
 
           <div className="flex gap-3 flex-col font-semibold w-full col-span-full lg:col-span-2">
@@ -73,6 +63,16 @@ export default function ScheduleModal({ setIsOpen }) {
             ))}
           </div>
 
+          <p className="col-span-full">
+            Jadwal anda {''}
+            {date.toLocaleDateString('id', {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+            {''} jam {time || '--'}.
+          </p>
           <Button className="col-span-full">Atur Jadwal</Button>
         </div>
       </div>

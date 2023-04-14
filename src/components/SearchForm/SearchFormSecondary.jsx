@@ -40,19 +40,19 @@ export default function SearchFormSecondary({ className }) {
               placeholder="Max. Harga"
               className="lg:text-base lg:inline lg:col-span-2"
             />
+
+            <select
+              className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base lg:inline lg:col-span-2"
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Tipe Property
+              </option>
+              <option value="Classic">Classic</option>
+              <option value="Premium">Premium</option>
+            </select>
           </>
         )}
-
-        <select
-          className="rounded-lg border border-[#BFBFBF] py-3 px-4 text-sm w-full invalid:text-gray-400 bg-white lg:text-base lg:inline lg:col-span-2"
-          defaultValue=""
-        >
-          <option value="" disabled>
-            Tipe Property
-          </option>
-          <option value="Classic">Classic</option>
-          <option value="Premium">Premium</option>
-        </select>
 
         <button
           className="flex items-center gap-2 justify-center p-2 lg:hidden"
